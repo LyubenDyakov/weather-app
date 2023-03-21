@@ -1,0 +1,211 @@
+html,body {
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+
+::placeholder {
+  color: white;
+  opacity: 100%;
+}
+
+.backg {
+  background-image: url("../public/wallpaper.jpg");
+  background-size: 150%;
+  background-position: center;
+  width: 414px;
+	height: auto;
+  text-align: center;
+	margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  @import '~style/helpers';
+}
+
+.input {
+  background-color: rgb(64,76,84);
+  white-space: nowrap; /* text on same line as icon */
+  color: white;
+  padding: 0.3em;
+  width: 88%;
+  border-radius: 9px;
+  border: none;
+  outline: none;
+  margin: auto;
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 16px;
+}
+
+.icon {
+  width: 2em;
+  height: 1.2em;
+  top: 0.26em;
+  position: relative;
+  color: white;
+}
+
+.heading {
+  position: relative;
+  display: flex;
+  padding: 2em 1em 0.25em 1em;
+  top: 0.3em;
+  color:white;
+  font-size: 32px;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+.weather-data {
+  color: white;
+  border-radius: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 2em;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 0 8em 0 8em;
+  width: 30%;
+}
+
+.city {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'SF Pro Display', sans-serif;
+  position: relative;
+  top: -1em;
+  left: -2.4em;
+  width: 8.85em;
+  text-align: left;
+}
+
+.speed {
+  font-size: 13px;
+  text-align: center;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+.direction {
+  position: relative;
+  top: 0em;
+  font-size: 13px;
+  text-align: center;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+.temp-div { /*temps box*/
+  position: relative;
+  left: 7em;
+  top: -10em;
+  margin: auto;
+}
+
+.hourly {
+  position: relative;
+  top: -9em;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: rgba(59, 137, 255, 0.486);
+  border-radius: 2em;
+}
+
+.today-container {
+  position: relative;
+  top: -6em;
+  height: auto;
+  width: 26.2em;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: rgba(59, 137, 255, 0.486);
+  border-radius: 2em;
+}
+
+.location-div { /*location box*/
+  border-radius: 25px;
+  padding: 0 3em 0 3em;
+  text-align: center;
+}
+
+.wind-div {
+  position: relative;
+  top: -13em;
+  left: 7em;
+  border: solid;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: white;
+}
+
+.temp {
+  font-size: 55px;
+  text-align: center;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 500;
+  position: relative;
+  top: -1em;
+}
+
+.feels-like {
+  font-size: 13px;
+  text-align: center;
+  font-family: 'SF Pro Display', sans-serif;
+  position: relative;
+  top: -5em;
+}
+
+
+.weather { /* main weather temp  */
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+.error-message {
+  position: relative;
+  color: white;
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.hourly-forecast {
+  display: flex;
+  margin: 5px 8px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hourly-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.today {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+}
+
+.snowFallToday {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 15px;
+}
