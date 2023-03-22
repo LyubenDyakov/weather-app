@@ -8,9 +8,11 @@ const MinMaxTemp = (props) => {
         <span className="today">
             <p>Today</p>
             <img className="iconToday" src={weatherData?.forecast?.forecastday[0]?.day?.condition?.icon} alt="today-icon"></img>
+            From
             <div className="min">
-                {Math.round(weatherData?.forecast?.forecastday[0]?.day?.mintemp_c)}°C
-            </div>                
+                {Math.round(weatherData?.forecast?.forecastday[0]?.day?.mintemp_c)}°C                
+            </div>                            
+            to
             <div>
                 {Math.round(weatherData?.forecast?.forecastday[0]?.day?.maxtemp_c)}°C
             </div>                 
@@ -43,9 +45,12 @@ const OpenLifts = (props) => {
     // Collect the arguments and store it into variables, which returns the number of open lifts.
     const {openLifts, totalLifts} = props;    
     return (
-        <div>
-            <b>Open Lifts</b>
+        <div className = "lift"> 
+            <img src= "lift.png" className = "liftimg" alt="lift-icon"></img>              
+            <div className = "lifttext">
+            <b>Open Lifts: </b>
             {openLifts}/{totalLifts}
+            </div>
         </div>
     );
 };
@@ -75,13 +80,27 @@ const TodayWeather = (props) => {
             <MinMaxTemp weatherData={weatherData}/>
             <hr/>        
             <div className="snowFallToday">
-            <WeatherDetails name={"Total Snow"} value={weatherData.forecast.forecastday[0].day.totalsnow_cm + " cm"}/>
-            <WeatherDetails name={"Snow Percentage"} value={weatherData.forecast.forecastday[0].day.daily_chance_of_snow + "%"}/>
-            <WeatherDetails name={"Rain Percentage"} value={weatherData.forecast.forecastday[0].day.daily_chance_of_rain + "%"}/>
-            <WeatherDetails name={"Visibility"} value={weatherData.forecast.forecastday[0].day.avgvis_km + "km"}/>
+                <img src = "snow.png" className="snowimg" alt="snow-icon"></img>
+                <div className = "totalsnow">
+                    <WeatherDetails name="Total Snow" value={weatherData.forecast.forecastday[0].day.totalsnow_cm + " cm"}/>
+                </div>
+                <img src = "snowpercent.png" className="snowpercentimg" alt="snow-percent-icon"></img>
+                <div className = "snowpercent">
+                    <WeatherDetails name="Snow Percentage" value={weatherData.forecast.forecastday[0].day.daily_chance_of_snow + "%"}/>
+                </div>
+                <img src = "rainpercent.png" className="rainpercentimg" alt="rain-percent-icon"></img>
+                <div className = "rainpercent">
+                    <WeatherDetails name="Rain Percentage" value={weatherData.forecast.forecastday[0].day.daily_chance_of_rain + "%"}/>
+                </div>
+                <img src = "visibility.png" className="visibilityimg" alt="visibility-icon"></img>
+                <div className = "visibility">
+                    <WeatherDetails name="Visibility" value={weatherData.forecast.forecastday[0].day.avgvis_km + "km"}/>
+                </div>
             </div>
-            <hr/>        
-            <OpenLifts openLifts={open} totalLifts={total}/>              
+            <hr/>    
+            
+            <OpenLifts openLifts={open} totalLifts={total}/> 
+                        
         </div>
     );    
 };

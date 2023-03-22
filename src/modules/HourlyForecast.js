@@ -5,6 +5,32 @@ const HourlyComponent = (props) => {
     // Collect the arguments and store them into appropriate variables for further uses.
     const {time, icon, temp_c, wind_kph, wind_dir} = props;
 
+    // Create a variable to store the wind direction icon.
+    var wind_icon;
+
+    // Implement different icons for different win directions.
+    if (wind_dir.length > 1) {
+        if (wind_dir.slice(-2) === "NW") { 
+            wind_icon = <li>&#8598;</li>;
+        } else if (wind_dir.slice(-2) === "NE") {
+            wind_icon = <li>&#8599;</li>;
+        } else if (wind_dir.slice(-2) === "SE") {
+            wind_icon = <li>&#8600;</li>;
+        } else {
+            wind_icon = <li>&#8601;</li>;
+        }
+    } else {
+        if (wind_dir === "N") {
+            wind_icon = <li>&#8593;</li>;
+        } else if (wind_dir === "E") {
+            wind_icon = <li>&#8594;</li>;
+        } if (wind_dir === "S") {
+            wind_icon = <li>&#8595;</li>;
+        } else {
+            wind_icon = <li>&#8592;</li>;
+        }
+    }
+
     // Render the component.
     return (
         <div className="hourly-forecast">
@@ -13,7 +39,7 @@ const HourlyComponent = (props) => {
                 <li><img src={icon} alt="hourly-icon"></img></li>
                 <li>{temp_c}°C</li>
                 <li>{wind_kph}km/h</li>
-                <li>{wind_dir}</li>
+                {wind_icon}
             </ul>
         </div>
     );

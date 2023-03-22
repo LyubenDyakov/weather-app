@@ -8,7 +8,9 @@ const OverallInfo = (props) => {
         <div>
             <div className="location-div">                
                 <p className="city">{weatherData?.location?.name}</p>
-                <p className="city"> {weatherData?.location?.country}</p>                
+                <div className ="country">
+                    <p> {weatherData?.location?.country}</p>                
+                </div>
             </div>            
             <div className="temp-div">
                 <img src={weatherData?.current?.condition?.icon} alt="weather-icon"></img>
