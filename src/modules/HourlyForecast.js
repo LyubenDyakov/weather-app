@@ -11,9 +11,9 @@ const HourlyComponent = (props) => {
             <ul>
                 <li>{time}</li>
                 <li><img src={icon} alt="hourly-icon"></img></li>
-                <li style={{fontSize:20}}>{Math.round(temp_c)} °C</li>  {/*adding some styling to the text*/}
-                <li style={{fontSize:12, paddingTop:5}}>{Math.round(wind_kph)} km/h</li>
-                <li style={{fontSize:12}}>{wind_dir}</li>
+                <li>{temp_c}°C</li>
+                <li>{wind_kph}km/h</li>
+                <li>{wind_dir}</li>
             </ul>
         </div>
     );
@@ -48,18 +48,21 @@ const HourlyForecast = (props) => {
     
     // Render the component.
     return (
-        <div className="hourly-container">                
-            <HourlyComponent time={"Now"} icon={weatherData?.current?.condition?.icon} 
-            temp_c={weatherData?.current?.temp_c} wind_kph={weatherData?.current?.wind_kph} wind_dir={weatherData?.current?.wind_dir}/>        
-            <HourlyComponent time={newArray[0].time.slice(10)} icon={newArray[0].condition?.icon}
-            temp_c={newArray[0].temp_c} wind_kph={newArray[0].wind_kph} wind_dir={newArray[0].wind_dir}/>
-            <HourlyComponent time={newArray[1].time.slice(10)} icon={newArray[1].condition?.icon}
-            temp_c={newArray[0].temp_c} wind_kph={newArray[1].wind_kph} wind_dir={newArray[1].wind_dir}/>
-            <HourlyComponent time={newArray[2].time.slice(10)} icon={newArray[2].condition?.icon}
-            temp_c={newArray[0].temp_c} wind_kph={newArray[2].wind_kph} wind_dir={newArray[2].wind_dir}/>
-            <HourlyComponent time={newArray[3].time.slice(10)} icon={newArray[3].condition?.icon}
-            temp_c={newArray[0].temp_c} wind_kph={newArray[3].wind_kph} wind_dir={newArray[3].wind_dir}/>            
+        <div className="hourly">
+            <div className="hourly-container">                
+                <HourlyComponent time={"Now"} icon={weatherData?.current?.condition?.icon} 
+                temp_c={weatherData?.current?.temp_c} wind_kph={weatherData?.current?.wind_kph} wind_dir={weatherData?.current?.wind_dir}/>        
+                <HourlyComponent time={newArray[0].time.slice(10)} icon={newArray[0].condition?.icon}
+                temp_c={newArray[0].temp_c} wind_kph={newArray[0].wind_kph} wind_dir={newArray[0].wind_dir}/>
+                <HourlyComponent time={newArray[1].time.slice(10)} icon={newArray[1].condition?.icon}
+                temp_c={newArray[0].temp_c} wind_kph={newArray[1].wind_kph} wind_dir={newArray[1].wind_dir}/>
+                <HourlyComponent time={newArray[2].time.slice(10)} icon={newArray[2].condition?.icon}
+                temp_c={newArray[0].temp_c} wind_kph={newArray[2].wind_kph} wind_dir={newArray[2].wind_dir}/>
+                <HourlyComponent time={newArray[3].time.slice(10)} icon={newArray[3].condition?.icon}
+                temp_c={newArray[0].temp_c} wind_kph={newArray[3].wind_kph} wind_dir={newArray[3].wind_dir}/>            
+            </div>
         </div>
+        
     );    
 };
 

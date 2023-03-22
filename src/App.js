@@ -194,13 +194,9 @@ export default function App() {
               <div>                
               </div>
             ): (              
-              <div className="weather-data">
-                <div className="location-div">                   
-                <OverallInfo weatherData={data}/>       
-                </div>         
-                <div className="hourly">           
-                <HourlyForecast weatherData={data}/>                                
-                </div>
+              <div className="weather-data">                                  
+                <OverallInfo weatherData={data}/>                                       
+                <HourlyForecast weatherData={data}/>                                                
                 <TodayWeather weatherData={data} skiData={skiData}/>
               </div>
             )}

@@ -7,13 +7,13 @@ const MinMaxTemp = (props) => {
         <div>
         <span className="today">
             <p>Today</p>
-                <div className="min">
-                    {Math.round(weatherData?.forecast?.forecastday[0]?.day?.mintemp_c)}°C
-                </div>
-                <img className="iconToday" src={weatherData?.forecast?.forecastday[0]?.day?.condition?.icon} alt="today-icon"></img>
-                <div>
-                    {Math.round(weatherData?.forecast?.forecastday[0]?.day?.maxtemp_c)}°C
-                </div>                 
+            <img className="iconToday" src={weatherData?.forecast?.forecastday[0]?.day?.condition?.icon} alt="today-icon"></img>
+            <div className="min">
+                {Math.round(weatherData?.forecast?.forecastday[0]?.day?.mintemp_c)}°C
+            </div>                
+            <div>
+                {Math.round(weatherData?.forecast?.forecastday[0]?.day?.maxtemp_c)}°C
+            </div>                 
         </span>
         </div>
     );
