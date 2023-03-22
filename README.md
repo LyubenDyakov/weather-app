@@ -1,8 +1,40 @@
-# Getting Started with Create React App
+# ECS522U GUI COURSEWORK 2022/23 - GROUP 57 - Weather APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+**Before doing any of this, if you're using your own laptop/desktop, make sure you've got the latest versions of node and npm installed (npm v: 4.0.5 & node v: 7.4.0) :**
+
+```sh
+node -v
+npm -v
+```
+
+**If you haven't already installed, then you would have to install the dependencies :**
+
+```sh
+npm install
+```
+
+## Quick App Overview
+
+- The initial run will display the iPhone version (iPhone 6/7 Plus screen size).
+
+- The app uses 2 main APIs that return general weather conditions and forecasts in 2 respective days & lifts information from 16 different locations.
+
+## APIs Used
+- General weather conditions and forecasts in 2 respective days: [Weather API](https://www.weatherapi.com/)
+- Lifts information from 16 different locations: [Ski Resorts and Conditions API](https://rapidapi.com/random-shapes-random-shapes-default/api/ski-resorts-and-conditions/)
+
+### API Info
+
+Weather API
+* Method: `GET`
+* URL: `http://api.weatherapi.com/v1/forecast.json?key={API_KEY}&q={CITY_NAME}&days={NUMBER_OF_DAYS}&aqi=no&alerts=no`
+
+Ski Resorts and Conditions API
+* Method: `GET`
+* URL: `https://ski-resorts-and-conditions.p.rapidapi.com/v1/resort/{RESORT_ID}`
+
+## Development Workflow
 
 In the project directory, you can run:
 
@@ -42,29 +74,3 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
