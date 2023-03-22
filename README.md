@@ -8,7 +8,7 @@ node -v
 npm -v
 ```
 
-**If you haven't already installed, then you would have to install the dependencies :**
+**Afterwards, install the dependencies :**
 
 ```sh
 npm install
@@ -16,7 +16,7 @@ npm install
 
 ## Quick App Overview
 
-- The initial run will display the iPhone version (iPhone 6/7 Plus screen size).
+- The initial run will display the Phone version. We are designing the resolution of the app so that the user can scroll up and down to see more specific weather informations.
 
 - The app uses 2 main APIs that return general weather conditions and forecasts in 2 respective days & lifts information from 16 different locations.
 
@@ -70,6 +70,17 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Available Lifts Information
+
+The App contains information of the number of available lifts of specific ski locations.
+
+Due to the API we are using for the lifts information, there are only 16 places that include the available lifts information.
+
+The list contains 16 USA locations:
+"Alpine Meadows", "Alyeska", "Angel Fire", "Arapaho", "Aspen Mountain", "Beaver Creek", "Big Sky", "Bolton", "Breckenridge", "Bretton Woods", "Brian Head", "Bridger", "Brighton", "Burke", "Buttermilk", "Camelback"
+
+To get the weather information of these locations, input: "{location_name}, USA".
 
 ## Learn More
 
