@@ -74,7 +74,6 @@ const TodayWeather = (props) => {
         <div className="today-container">                
             <MinMaxTemp weatherData={weatherData}/>
             <hr/>        
-            <b>Snow Fall</b>
             <div className="snowFallToday">
             <WeatherDetails name={"Total Snow"} value={weatherData.forecast.forecastday[0].day.totalsnow_cm + " cm"}/>
             <WeatherDetails name={"Snow Percentage"} value={weatherData.forecast.forecastday[0].day.daily_chance_of_snow + "%"}/>
